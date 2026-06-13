@@ -8,30 +8,81 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-        <h1 class="logo">SneakMax</h1>
-        <div class="menu">
-            <a href="">Каталог</a>
-            <a href="">О нас</a>
-            <a href="">Подбор товара</a>
-            <a href="">Наша команда</a>
-            <a href="">Доставка и оплата</a>
-            <a href="">Контакты</a>
+    <header class="header">
+        <div class="container header_container grid">
+          <div class="header_left">
+            <a href="" class="logo">SneakMax</a>
+          </div>
+          <div class="header_right">
+            <nav class="nav header_nav">
+              <ul class="nav_list list_reset">
+                <li class="nav_item"><a href="" class="nav_link">Каталог</a></li>
+                <li class="nav_item"><a href="" class="nav_link">О нас</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Подбор товара</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Наша команда</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Доставка и оплата</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="header_cart">
+              <a href="" class="cart_link"><img src="Vector.svg"></a>      
+            </div>
+          </div>
         </div>
-        <div class="cart">
-            <img src="Vector.svg">
-            <a href="">Корзина</a>
-        </div>
-        <div class="hero">
-            <h2>Кроссовки известных брендов с доставкой по России и СНГ</h2>
-            <p>Мы продаём кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многое другое по низким ценам</p>
-            <button>Перейти к покупкам</button>
-        </div>
-    </header>
-    <main>
-    </main>
-    <footer>
-    </footer>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <span class="hero_bg-text">SneakMax</span>
+          <div class="cantainer hero_container">
+            <h1 class="hero_title">Кроссовки известных брендов с доставкой по России и СНГ</h1>
+            <p class="hero_text">Мы продаём кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многое другое по низким ценам</p>
+            <button class="hero_button">Перейти к покупкам</button>
+          </div>
+        </section>
+        <section class="catalog">
+          <div class="container catalog_container">
+            <h2 class="catalog_title">Каталог</h2>
+            <div class="catalog_content grid">
+              <div class="catalog_left">
+                <div class="catalog_fitter">
+                  <h3 class="catalog_subtitle">Подбор по параметрам</h3>
+                  <div class="catalog_prop">
+                    <strong class="catalog_caption">Цена, Руб</strong>
+                  </div>
+                  <div class="catalog_prop">
+                    <strong class="catalog_caption">Пол</strong>
+                    <div class="catalog_checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" class="input_checkbox">
+                        <span>Мужской</span>
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="input_checkbox">
+                        <span>Женский</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="catalog_prop">
+                    <strong class="catalog_caption">Размер</strong>
+                  </div>
+                  <div class="catalog_buttons">
+                    <button class="submit">Применить</button>
+                    <button class="reset">Сбросить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog_right">
+                <div class="catalog_card">
+                  <img src="6a4ccb733d5636cb20ebbdfd22ef229cec9df732.jpg">
+                  <p class="catalog_text">Кроссовки Nike Air Force 1 '07 QS</p>
+                  <p>11 000 руб.</p>
+                </div>
+                <button>Показать ещё</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>        
     <script src="script.js"></script>
   </body>
 </html>
