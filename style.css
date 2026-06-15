@@ -273,6 +273,12 @@ body{
     background-color: #484283;
 }
 
+.about_figure{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .about_container{
     position: relative;
     display: flex;
