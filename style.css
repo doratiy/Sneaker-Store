@@ -348,3 +348,151 @@ body{
     object-fit: cover;
     transform: rotate(-15deg) translateX(-50%);
 }
+
+.team{
+    position: relative;
+    padding: 60px 0;
+    background-color: #484283;
+}
+
+.team_figure{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.team_title{
+    color: white;
+}
+
+.team_list{
+    position: relative;
+    z-index: 5;
+    row-gap: 40px;
+    column-gap: 20px;
+}
+
+.team_item{
+    grid-column: 4 span;
+}
+
+.team_img{
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 380px;
+    height: 400px;
+}
+
+.team_subtitle{
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+}
+
+.team_post{
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: white;
+}
+
+.faq{
+    padding: 60px;
+}
+
+.faq_list{
+    margin: 0 auto;
+    max-width: 880px;
+}
+
+.faq-accordion{
+    border-top: 1px solid #444b58;
+    border-bottom: 1px solid #444b58;
+}
+
+.faq-accordion_control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: #444b58;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.faq-accordion_icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(cross.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-out;
+}
+
+.faq-accordion_content {
+    overflow: hidden;
+    padding-right: 70px;
+    padding-bottom: 0;
+    max-height: 0;
+    box-sizing: content-box;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(36, 36, 36, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    will-change: max-height; 
+}
+
+.accordion_control {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer; }
+
+.open .faq-accordion_icon {
+  transform: rotate(45deg); 
+}
+
+.open .faq-accordion_content {
+  padding-bottom: 18px;
+  opacity: 1; 
+}
+
+.footer {
+    padding: 28px 0;
+    background-color: #444b58;
+}
+
+.footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_left{
+    margin-bottom: 20px;
+}
+
+.nav_list {
+    display: flex;
+    align-self: center;
+}
