@@ -239,42 +239,18 @@
             </div>
           </div>
         </section>
-
         <section class="team">
           <img class="team_figure" src="/static/images/Group 72.svg">
           <div class="container">
             <h2 class="team_title">Наша команда</h2>
             <ul class="team_list list-reset grid">
+              {% for team in teams %}
               <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
+                <img class="team_img" src="{{ team.image_path }}">
+                <strong class="team_subtitle">{{ team.name }}</strong>
+                <span class="team_post">{{ team.post }}</span>
               </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </section>
@@ -301,6 +277,70 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="contacts">
+            <div class="container contacts_container">
+                <div class="contacts_text">
+                    <h2 class="contacts_title">Контакты</h2>
+                    <div class="contacts_item">
+                      <h3 class="contacts_subtitle">
+                        Главный офис
+                        <span class="tooltip">
+                          <span class="tooltip_btn">?</span>
+                          <span class="tooltip_txt" role="tooltip" id="office">
+                            <span class="visually-hidden">Тултип: </span>
+                            Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара
+                            просьба задавать в отдел продаж
+                          </span>
+                        </span>
+                      </h3>
+                      <a href="" class="contacts_phone">+7 880 789 89 89</a>
+                      <br>
+                      <span class="contacts_adress">г. Санкт-Петербург, Комсомольская, 43 к1</span>
+                    </div>
+                    <div class="contacts_item">
+                        <h3 class="contacts_subtitle">Отдел продаж</h3>
+                        <a href="" class="contacts_phone">+7 880 789 89 89</a>
+                        <br>
+                        <span class="contacts_adress">г. Санкт-Петербург, Комсомольская, 43 к1</span>
+                    </div>
+                    <ul class="social list-reset">
+                      <li class="social_item">
+                        <a href="#" class="social_link social_link-vk" aria-label="Мы во Вконтакте"><img src="/static/images/vk.svg"></a>
+                      </li>
+                      <li class="social_item">
+                        <a href="#" class="social_link social_link-vk" aria-label="Мы во Вконтакте"><img src="/static/images/insta.svg"></a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="contacts_map" id="map">
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad20af06337d725441ddf8061ee161a2a63511d6326501fc64fb049f7bea768d8&amp;width=703&amp;height=598&amp;lang=ru_RU&amp;scroll=true"></script>           
+                </div>
+            </div>
+        </section>
+        <section class="insta">
+          <h2 class="visually-hidden">Форма и инстаграм-лента</h2>
+          <div class="container instagram_container">
+            <div class="instagram_left">
+              <form action="#" class="callback-form" novalidate="novalidate">
+                <h3 class="title instagram_title">Есть вопросы?</h3>
+                <p class="instagram_descr">Заполните форму и наш менеджер свяжется с вами</p>
+                <label class="form-label">
+                  <input type="text" class="input instagram_input" placeholder="Ваше имя" name="name" data-validate-field="name">
+                </label>
+                <label class="form-label">
+                  <input type="tel" class="input instagram_input" placeholder="Номер телефона" name="phone" data-validate-field="phone" inputmode="text">
+                </label>
+                <button class="btn btn-primary btn-reset instagram_btn">Отправить</button>
+              </form>
+            </div>
+            <div class="instagram_right">
+              <a href="#" class="instagram_link"><img src="static/images/instagram.png" alt="Лого инстаграма"></a>
+              <div class="instagram_content">
+                <article class="instagram_item"></article>
+              </div>
+            </div>
           </div>
         </section>
       </main>

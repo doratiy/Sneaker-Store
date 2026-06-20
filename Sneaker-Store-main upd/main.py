@@ -65,7 +65,7 @@ def site():
 
 #---------Каталог----------------------------
 
-    database = pd.read_excel('База Данных.xlsx')
+    database = pd.read_excel('База Данных кроссовки.xlsx')
         
     sneakers = []
 
@@ -78,7 +78,23 @@ def site():
 
         print(row['Путь до картинки'])
 
-    return render_template('index.html', sneakers=sneakers)
+#------------------Люди--------------------------------------
+
+
+    database = pd.read_excel('База Данных люди.xlsx')
+        
+    teams = []
+
+    for index, row in database.iterrows():
+        teams.append({
+            'name': row['Имя'],
+            'post': row['Должность'],
+            'image_path': row['Путь до картинки']
+        })
+
+        print(row['Путь до картинки'])
+
+    return render_template('index.html', sneakers=sneakers, teams=teams)
 
 
 
