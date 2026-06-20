@@ -113,6 +113,132 @@
             </div>
           </div>
         </section>
+
+        <section class="quiz">
+          <div class="container-first step">
+            <div class="first_container-header">
+              <h2 class="first-header">Мы подберем идеальную пару для вас</h2>
+
+              <p class="quiz-description">Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями</p>
+
+              <h3 class="quiz-question">Какой тип кроссовок рассматриваете?</h1>
+            </div>
+            <div class="quiz_card-container">
+
+              <label class="quiz_card-item" data-label="кеды">
+                <div class="quiz_card" style="background-image: url('/static/images/кеды.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>кеды</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/беговые.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>беговые</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/повседневные.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>повседневные</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/баскетбольные.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>баскетбольные</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/теннисные.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>теннисные</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/треккинговые.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>треккинговые</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="first_quiz-footer">
+              <p class="pages">1 из 3</p>
+              <button class="quiz_button first_button">Следующий шаг</button>
+            </div>
+          </div>
+
+          <div class="container-second step">
+            <div class="second_container-header">
+              <h2 class="second-header">Мы подберем идеальную пару для вас</h2>
+              <div class="second_quiz-description"><p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями</p></div>
+              <h3 class="second_quiz-question">Какой тип кроссовок рассматриваете?</h1>
+            </div>
+  
+            <div class="quiz_sizes-container">
+              <div class="sizes-checkbox">
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>менее 36</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>36-38</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>39-41</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>42-44</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>45 и больше</span>
+                </label>
+              </div>
+              <div class="quiz-picture"><img src="/static/images/Rectangle 45.png"></div>
+            </div>
+
+            <div class="second_quiz-footer">
+              <p class="pages">2 из 3</p>
+              <button class="quiz_button second_button">Следующий шаг</button>
+            </div>
+          </div>
+
+          <div class="container-third step">
+            <div third_container>
+              <div class="third_container-header">
+                <h2 class="third-header">Ваша подборка готова!</h2>
+                <div class="second_quiz-description"><p>Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог</p></div>
+              </div>
+                
+              <div class="form-container">
+                <h1 class="form-header form-text">Получить предложение</h1>
+                <p class="form-desc form-text">Получите подборку подходящих для вас моделей на почту</p>
+                <form action="/" method="POST">
+                  <input type="hidden" name="form_type" value="form1_submit">
+                  <input type="text" placeholder="Ваше имя" class="send-input" name="user_name">
+                  <input type="email" placeholder="E-mail" class="send-input" name="user_email">
+                  <button class="send-button" type="submit">Получить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="team">
           <img class="team_figure" src="/static/images/Group 72.svg">
           <div class="container">
@@ -181,20 +307,20 @@
                 <div class="contacts_text">
                     <h2 class="contacts_title">Контакты</h2>
                     <div class="contacts_item">
-                        <h3 class="contacts_subtitle">
-                            Главный офис
-                            <span class="tooltip">
-                            
-                                <span class="tooltip_txt" role="tooltip" id="office">
-                                  <span class="visually-hidden">Тултип: </span>
-                                  Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара
-                                  просьба задавать в отдел продаж
-                                </span>
-                            </span>
-                        </h3>
-                        <a href="" class="contacts_phone">+7 880 789 89 89</a>
-                        <br>
-                        <span class="contacts_adress">г. Санкт-Петербург, Комсомольская, 43 к1</span>
+                      <h3 class="contacts_subtitle">
+                        Главный офис
+                        <span class="tooltip">
+                          <span class="tooltip_btn">?</span>
+                          <span class="tooltip_txt" role="tooltip" id="office">
+                            <span class="visually-hidden">Тултип: </span>
+                            Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара
+                            просьба задавать в отдел продаж
+                          </span>
+                        </span>
+                      </h3>
+                      <a href="" class="contacts_phone">+7 880 789 89 89</a>
+                      <br>
+                      <span class="contacts_adress">г. Санкт-Петербург, Комсомольская, 43 к1</span>
                     </div>
                     <div class="contacts_item">
                         <h3 class="contacts_subtitle">Отдел продаж</h3>

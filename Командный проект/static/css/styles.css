@@ -738,6 +738,12 @@ body{
     height: 20px;
     box-shadow: 2px 4px 10px rgba(0, 13, 84, 0.2);
     background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #444b58;
+    cursor: default;
 }
 
 .tooltip_txt {
@@ -929,4 +935,317 @@ body{
 .instagram_item {
     overflow: hidden;
     border-radius: 4px;
+}
+
+.quiz {
+    background-color:#FFF4EE;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.first_container-header {
+  width: 1550px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.quiz-description {
+    margin-top: 20px;
+}
+
+.first-header {
+    color: #444B58;
+}
+
+.quiz-description {
+    color: #808080;
+}
+
+
+.quiz-header,
+.quiz-description,
+.quiz-question {
+  text-align: left;
+}
+
+.step {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF4EE;
+
+}
+
+.step.active {
+  display: flex;
+  animation: softSlideUp 0.4s ease-out forwards;
+}
+
+.quiz_card-container {
+  margin-top: 25px; 
+  width: 1550px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px 100px;
+}
+
+
+.quiz_card {
+    width: 100%;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #C4C4C4;
+}
+
+.quiz-question::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #808080;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.quiz-checkbox {
+  display: flex;
+  align-items: center;  
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #DBBBA9;
+  border-radius: 6px;  
+  outline: none;
+  cursor: pointer;
+  background: #FFF4EE;
+}
+
+
+.quiz-checkbox:checked {
+  background-color: #FFF4EE; 
+  background-image: url("/static/images/Group.svg");
+  background-size: 20px;       
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+
+.checkbox-container {
+    margin-top: 15px;
+    display: flex;
+    left: 0;
+    align-items: center;
+}
+
+.checkbox-container span {
+    margin-left: 5px;
+}
+
+
+.first_quiz-footer {
+    width: 1550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.first_quiz-footer::before { 
+  width: 1550px; 
+  content: '';
+  display: block;
+  height: 1px;
+  background: #808080;
+  margin-bottom: 20px;
+  margin-top: 40px; 
+}
+
+.first_button {
+    width: 340px;
+    height: 60px;
+}
+
+
+.quiz_button {
+    border: 1px solid #444B58;
+    border-radius: 5px;
+    background-color: #FFF4EE;
+}
+
+.quiz_card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.quiz-question {
+    color: #444B58;
+}
+
+
+.second-header {
+    color: #444B58;
+    width: 1066px;
+}
+
+.second_quiz-description {
+    color: #808080;
+    margin-top: 20px;
+}
+
+.second_quiz-question {
+    color: #444B58;
+}
+
+
+.quiz-picture {
+    margin-top: 25px;
+}
+
+.second_quiz-question::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #808080;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.second_button {
+    width: 230px;
+    height: 60px;
+}
+
+.quiz_sizes-container {
+    width: 1066px;
+}
+
+.second_quiz-footer {
+    width: 1066px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.second_quiz-footer::before { 
+  width: 1066px; 
+  content: '';
+  display: block;
+  height: 1px;
+  background: #808080;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.sizes-checkbox {
+  margin-top: 40px;  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.size-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.container-third.step.active {
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 655px;
+    height: 390px;
+    position: relative;
+    background-color: #DBBBA9;
+    align-items: flex-start;
+    padding: 40px 230px 40px 40px;
+    box-sizing: border-box;
+}
+
+.form-container form {
+    justify-content: center;
+}
+
+
+.form-header {
+    margin: 0 !important;
+    color: #FFFFFF;
+}
+
+.form-desc {
+    margin: 0 !important;
+    color: #FFFFFF;
+}
+
+.send-input {
+    width: 500px;
+    height: 60px;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-indent: 30px;
+    font-size: 16px;
+    color: #B2B5BB;
+}
+
+.send-button {
+    margin-top: 20px;
+    width: 220px;
+    height: 60px;
+    background-color: #F14F4F;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.form-container::after {
+    content: "";
+    background-image: url('/static/images/iPhone 11 Pro.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 205px;
+    height: 411px;
+    position: absolute;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.third_container-header p{
+    color: #DBBBA9;
+}
+
+
+.third_container-header::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #DBBBA9;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.third-header {
+    color: #444B58;
+}
+
+.pages {
+    color: #808080;
 }

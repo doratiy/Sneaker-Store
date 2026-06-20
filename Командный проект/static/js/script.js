@@ -18,3 +18,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const steps = document.querySelectorAll('.step');
+  let currentStep = 0;
+
+  if (steps.length > 0) {
+    steps[0].classList.add('active');
+  }
+
+  function nextStep() {
+    if (currentStep < steps.length - 1) {
+      steps[currentStep].classList.remove('active');
+      currentStep++;
+      steps[currentStep].classList.add('active');
+    }
+  }
+
+  document.querySelectorAll('.quiz_button').forEach(btn => {
+    btn.addEventListener('click', nextStep);
+  });
+});
