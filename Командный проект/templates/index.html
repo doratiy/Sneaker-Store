@@ -244,36 +244,13 @@
           <div class="container">
             <h2 class="team_title">Наша команда</h2>
             <ul class="team_list list-reset grid">
+              {% for team in teams %}
               <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
+                <img class="team_img" src="{{ team.image_path }}">
+                <strong class="team_subtitle">{{ team.name }}</strong>
+                <span class="team_post">{{ team.post }}</span>
               </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
-              <li class="team_item">
-                <img class="team_img" src="/static/images/team-1.jpg">
-                <strong class="team_subtitle">Святослав Шумаев</strong>
-                <span class="team_post">Администратор</span>
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </section>
@@ -361,7 +338,26 @@
             <div class="instagram_right">
               <a href="#" class="instagram_link"><img src="static/images/instagram.png" alt="Лого инстаграма"></a>
               <div class="instagram_content">
-                <article class="instagram_item"></article>
+                <article class="instagram_item">
+                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
+                  <img src="static/images/insta-1.jpg" alt="Фото из Инстаграма">
+                </article>
+                <article class="instagram_item">
+                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
+                  <img src="static/images/insta-2.jpg" alt="Фото из Инстаграма">
+                </article>
+                <article class="instagram_item">
+                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
+                  <img src="static/images/insta-3.jpg" alt="Фото из Инстаграма">
+                </article>
+                <article class="instagram_item">
+                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
+                  <img src="static/images/insta-4.jpg" alt="Фото из Инстаграма">
+                </article>
+                <article class="instagram_item">
+                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
+                  <img src="static/images/insta-5.jpg" alt="Фото из Инстаграма">
+                </article>
               </div>
             </div>
           </div>
