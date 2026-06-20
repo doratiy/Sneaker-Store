@@ -193,7 +193,7 @@ body{
 
 .catalog_container {
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
 }
 
 .catalog_title{
@@ -406,7 +406,7 @@ body{
   background: #444B58;
   border-radius: 2px;
   outline: none;
-  /* webkit-appearance: none; */
+  webkit-appearance: none;
   pointer-events: none;
 }
 
@@ -552,6 +552,7 @@ body{
     z-index: 5;
     row-gap: 40px;
     column-gap: 20px;
+    list-style: none;
 }
 
 .team_item{
@@ -587,14 +588,19 @@ body{
     padding: 60px;
 }
 
+.faq_title{
+    margin-bottom: 40px;
+    margin-left: 138px;
+}
+
 .faq_list{
     margin: 0 auto;
     max-width: 880px;
+    list-style: none;
 }
 
 .faq-accordion{
-    border-top: 1px solid #444b58;
-    border-bottom: 1px solid #444b58;
+    list-style: none;
 }
 
 .faq-accordion_control {
@@ -610,6 +616,12 @@ body{
     color: #444b58;
     background-color: transparent;
     cursor: pointer;
+    border: none;
+    border-top: 1px solid #444B58;
+}
+
+.faq-accordion_control:not(:first-child){
+    border-bottom: 1px solid #444B58;
 }
 
 .btn-reset {
@@ -646,22 +658,24 @@ body{
 }
 
 .accordion_control {
-  width: 100%;
-  background-color: transparent;
-  cursor: pointer; }
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer; 
+}
 
 .open .faq-accordion_icon {
-  transform: rotate(45deg); 
+    transform: rotate(45deg); 
 }
 
 .open .faq-accordion_content {
-  padding-bottom: 18px;
-  opacity: 1; 
+    padding-bottom: 18px;
+    opacity: 1; 
 }
 
 .footer {
     padding: 28px 0;
     background-color: #444b58;
+    height: 80px;
 }
 
 .footer_container {
@@ -670,11 +684,249 @@ body{
     justify-content: space-between;
 }
 
-.footer_left{
-    margin-bottom: 20px;
-}
-
 .nav_list {
     display: flex;
     align-self: center;
+}
+
+.contacts{
+    padding: 60px 0;
+    background-color: #f3f6f6;
+}
+
+.contacts_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contacts_text {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contacts_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.contacts_item {
+    margin-bottom: 40px;
+    font-style: normal;
+}
+
+.contacts_subtitle {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #b2b5bb;
+}
+
+.tooltip {
+    position: relative;
+    margin-left: 10px;
+}
+
+.tooltip_btn {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 13, 84, 0.2);
+    background: white;
+}
+
+.tooltip_txt {
+    position: absolute;
+    left: -10px;
+    bottom: calc(100% + 14px);
+    z-index: 3;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 426px;
+    box-shadow: 4px 8px 20px rgba(0, 13, 84, 0.2);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: initial;
+    color: #444b58;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.tooltip:hover .tooltip_txt {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.tooltip::after{
+    content: "?";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 10px 8px 0;
+    border-color: white transparent transparent transparent;
+    border-radius: 4px;
+    width: 0;
+    height: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.contacts_phone {
+    display: inline-block;
+    margin-bottom: 10px;
+    outline: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    color: #444b58;
+    transition: color 0.3s ease-in-out;
+}
+
+.social {
+    display: flex;
+    list-style: none;
+}
+
+.social_item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.social__link {
+    display: block;
+    outline: none;
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contacts_map {
+    width: 100%;
+}
+
+.instagram {
+    padding: 60px;
+}
+
+.instagram_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.instagram_left {
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 4px;
+    width: 380px;
+    background-color: #484283;
+}
+
+.callback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.instagram_title {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.instagram_descr {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 260px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: white;
+}
+
+.form-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input {
+    border: none;
+    border-radius: 4px;
+    padding: 0 20px;
+    width: 100%;
+    height: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #444b58;
+    background-color: white;
+}
+
+.instagram_input {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #f14f4f;
+}
+
+.instagram_btn {
+    width: 100%;
+}
+
+.instagram_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - (380px + 10px));
+}
+
+.instagram_link {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.instagram_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 160px);
+    gap: 15px;
+}
+
+.instagram_item {
+    overflow: hidden;
+    border-radius: 4px;
 }
