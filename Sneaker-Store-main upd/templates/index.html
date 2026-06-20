@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SneakMax</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+  </head>
+  <body>
+    <div class="site_container">
+      <header class="header">
+        <div class="container header_container grid">
+          <div class="header_left">
+            <a href="" class="logo">SneakMax</a>
+          </div>
+          <div class="header_right">
+            <nav class="nav header_nav">
+              <ul class="nav_list list_reset">
+                <li class="nav_item"><a href="" class="nav_link">Каталог</a></li>
+                <li class="nav_item"><a href="" class="nav_link">О нас</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Подбор товара</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Наша команда</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Доставка и оплата</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="header_cart">
+              <a href="" class="cart_link"><img src="static/images/Vector.svg"></a>      
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <span class="hero_bg-text">SneakMax</span>
+          <div class="container hero_container">
+            <h1 class="hero_title">Кроссовки известных брендов с доставкой по России и СНГ</h1>
+            <p class="hero_text">Мы продаём кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многое другое по низким ценам</p>
+            <button class="hero_button">Перейти к покупкам</button>
+          </div>
+        </section>
+        <section class="catalog">
+          <div class="container catalog_container">
+            <h2 class="catalog_title">Каталог</h2>
+            <div class="catalog_content grid">
+              <div class="catalog_left">
+                <div class="catalog_fitter">
+                  <h3 class="catalog_subtitle intro-book">Подбор</h3>
+                  <h3 class="catalog_subtitle intro-book">по параметрам</h3>
+                  <div class="catalog_prop">
+                    <p class="catalog_caption intro-book">Цена, Руб</p>
+                    <form class="price_form">
+                      <input placeholder="18000" class="input_price intro-book"></input>
+                      <div class="divider"></div>
+                      <input placeholder="20000" class="input_price intro-book"></input>
+                        <input type="range" class="slider" min="0" max="30000" value="1850">
+                        <input type="range" class="slider" min="0" max="30000" value="25768">
+                    </form>
+                  </div>
+                  <div class="catalog_prop">
+                    <p class="catalog_caption intro-book">Пол</p>
+                    <div class="catalog_checkbox">
+                      <input type="checkbox" id="male" class="male gender intro-book">
+                      <input type="checkbox" id="female" class="female gender intro-book">
+                    </div>
+                  </div>
+                  <div class="catalog_prop">
+                    <p class="catalog_caption intro-book">Размер</p>
+                    <div class="sizes-container intro-book">
+                      <div class="grid-item">35</div>
+                      <div class="grid-item">36</div>
+                      <div class="grid-item">37</div>
+                      <div class="grid-item">38</div>
+                      <div class="grid-item">39</div>
+                      <div class="grid-item">40</div>
+                      <div class="grid-item">41</div>
+                      <div class="grid-item">42</div>
+                      <div class="grid-item">43</div>
+                    </div>
+                  </div>
+                  <div class="catalog_buttons">
+                    <button class="submit intro-regular">Применить</button>
+                    <button class="reset intro-regular">Сбросить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog_right">
+                {% for sneaker in sneakers %}
+                <div class="catalog_card">
+                  <img src="{{ sneaker.image_path }}" alt="{{ sneaker.name }}">
+                  <p class="catalog_text intro-book">{{ sneaker.name }}</p>
+                  <p class="catalog_cost intro-regular">{{ sneaker.cost }} ₽</p>
+                </div>
+                {% endfor %}
+                <button class="button-more intro-regular">Показать ещё</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <img class="about_figure" src="/static/images/figure.svg">
+          <div class="container about_container">
+            <div class="about_text">
+              <h2 class="about_title">Пара слов о нас</h2>
+              <p class="about_descr">
+                <q class="about_quote">Спорт держит нас в форме. Учит дисциплине. Объединяет нас. Через спорт мы можем менять жизни. В том числе с помощью воодушевляющих историй спортсменов. Чтобы помочь тебе подняться и двигаться вперед.</q>
+                <cite class="about_author">SneakMax</cite>
+              </p>
+            </div>
+            <div class="about_image">
+              <img src="/static/images/just_img.jpg">
+            </div>
+          </div>
+        </section>
+
+        <section class="quiz">
+          <div class="container-first step">
+            <div class="first_container-header">
+              <h2 class="first-header">Мы подберем идеальную пару для вас</h2>
+
+              <p class="quiz-description">Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями</p>
+
+              <h3 class="quiz-question">Какой тип кроссовок рассматриваете?</h1>
+            </div>
+            <div class="quiz_card-container">
+
+              <label class="quiz_card-item" data-label="кеды">
+                <div class="quiz_card" style="background-image: url('/static/images/кеды.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>кеды</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/беговые.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>беговые</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/повседневные.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>повседневные</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/баскетбольные.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>баскетбольные</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/теннисные.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>теннисные</span>
+                </div>
+              </label>
+
+              <label class="quiz_card-item">
+                <div class="quiz_card" style="background-image: url('/static/images/треккинговые.png');"></div>
+                <div class="checkbox-container">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>треккинговые</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="first_quiz-footer">
+              <p class="pages">1 из 3</p>
+              <button class="quiz_button first_button">Следующий шаг</button>
+            </div>
+          </div>
+
+          <div class="container-second step">
+            <div class="second_container-header">
+              <h2 class="second-header">Мы подберем идеальную пару для вас</h2>
+              <div class="second_quiz-description"><p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями</p></div>
+              <h3 class="second_quiz-question">Какой тип кроссовок рассматриваете?</h1>
+            </div>
+  
+            <div class="quiz_sizes-container">
+              <div class="sizes-checkbox">
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>менее 36</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>36-38</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>39-41</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>42-44</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" class="quiz-checkbox">
+                  <span>45 и больше</span>
+                </label>
+              </div>
+              <div class="quiz-picture"><img src="/static/images/Rectangle 45.png"></div>
+            </div>
+
+            <div class="second_quiz-footer">
+              <p class="pages">2 из 3</p>
+              <button class="quiz_button second_button">Следующий шаг</button>
+            </div>
+          </div>
+
+          <div class="container-third step">
+            <div third_container>
+              <div class="third_container-header">
+                <h2 class="third-header">Ваша подборка готова!</h2>
+                <div class="second_quiz-description"><p>Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог</p></div>
+              </div>
+                
+              <div class="form-container">
+                <h1 class="form-header form-text">Получить предложение</h1>
+                <p class="form-desc form-text">Получите подборку подходящих для вас моделей на почту</p>
+                <form action="/" method="POST">
+                  <input type="hidden" name="form_type" value="form1_submit">
+                  <input type="text" placeholder="Ваше имя" class="send-input" name="user_name">
+                  <input type="email" placeholder="E-mail" class="send-input" name="user_email">
+                  <button class="send-button" type="submit">Получить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="team">
+          <img class="team_figure" src="/static/images/Group 72.svg">
+          <div class="container">
+            <h2 class="team_title">Наша команда</h2>
+            <ul class="team_list list-reset grid">
+              <li class="team_item">
+                <img class="team_img" src="/static/images/team-1.jpg">
+                <strong class="team_subtitle">Святослав Шумаев</strong>
+                <span class="team_post">Администратор</span>
+              </li>
+              <li class="team_item">
+                <img class="team_img" src="/static/images/team-1.jpg">
+                <strong class="team_subtitle">Святослав Шумаев</strong>
+                <span class="team_post">Администратор</span>
+              </li>
+              <li class="team_item">
+                <img class="team_img" src="/static/images/team-1.jpg">
+                <strong class="team_subtitle">Святослав Шумаев</strong>
+                <span class="team_post">Администратор</span>
+              </li>
+              <li class="team_item">
+                <img class="team_img" src="/static/images/team-1.jpg">
+                <strong class="team_subtitle">Святослав Шумаев</strong>
+                <span class="team_post">Администратор</span>
+              </li>
+              <li class="team_item">
+                <img class="team_img" src="/static/images/team-1.jpg">
+                <strong class="team_subtitle">Святослав Шумаев</strong>
+                <span class="team_post">Администратор</span>
+              </li>
+              <li class="team_item">
+                <img class="team_img" src="/static/images/team-1.jpg">
+                <strong class="team_subtitle">Святослав Шумаев</strong>
+                <span class="team_post">Администратор</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="faq">
+          <div class="container">
+            <h2 class="faq_title">Часто задаваемые вопросы</h2>
+            <ul class="faq_list">
+              <li class="faq-accordion">
+                <button class="faq-accordion_control">
+                  <span class="faq-accordion_title">Вопрос 1</span>
+                  <span class="faq-accordion_icon"></span>
+                </button>
+                <div class="faq-accordion_content">
+                  <p>А это ответ 1: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми</p>
+                </div>
+              </li>
+              <li class="faq-accordion">
+                <button class="faq-accordion_control">
+                  <span class="faq-accordion_title">Вопрос 1</span>
+                  <span class="faq-accordion_icon"></span>
+                </button>
+                <div class="faq-accordion_content">
+                  <p>А это ответ 1: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer_container">
+          <div class="footer_left">
+            <a href="" class="logo">SneakMax</a>
+          </div>
+          <div class="footer_right">
+            <nav class="nav footer_nav">
+              <ul class="nav_list list_reset">
+                <li class="nav_item"><a href="" class="nav_link">Каталог</a></li>
+                <li class="nav_item"><a href="" class="nav_link">О нас</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Подбор товара</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Наша команда</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Доставка и оплата</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
