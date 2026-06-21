@@ -320,43 +320,55 @@
             </div>
         </section>
         <section class="insta">
-          <h2 class="visually-hidden">Форма и инстаграм-лента</h2>
+          <h2 class="visually-hidden">Форма и инстаграм‑лента</h2>
           <div class="container instagram_container">
             <div class="instagram_left">
-              <form action="#" class="callback-form" novalidate="novalidate">
+              <form action="#" class="callback-form" novalidate>
                 <h3 class="title instagram_title">Есть вопросы?</h3>
                 <p class="instagram_descr">Заполните форму и наш менеджер свяжется с вами</p>
                 <label class="form-label">
-                  <input type="text" class="input instagram_input" placeholder="Ваше имя" name="name" data-validate-field="name">
+                  <input
+                    type="text"
+                    class="input instagram_input"
+                    placeholder="Ваше имя"
+                    name="name"
+                    required
+                    data-validate-field="name"
+                  >
                 </label>
                 <label class="form-label">
-                  <input type="tel" class="input instagram_input" placeholder="Номер телефона" name="phone" data-validate-field="phone" inputmode="text">
+                  <input
+                    type="tel"
+                    class="input instagram_input"
+                    placeholder="Номер телефона"
+                    name="phone"
+                    required
+                    inputmode="tel"
+                    data-validate-field="phone"
+                  >
                 </label>
-                <button class="btn btn-primary btn-reset instagram_btn">Отправить</button>
+                <button class="btn btn-primary btn-reset instagram_btn" type="submit">Отправить</button>
               </form>
             </div>
             <div class="instagram_right">
-              <a href="#" class="instagram_link"><img src="static/images/instagram.png" alt="Лого инстаграма"></a>
+              <a href="" class="instagram_link" target="_blank" rel="noopener">
+                <img src="static/images/instagram.png" alt="">
+              </a>
               <div class="instagram_content">
                 <article class="instagram_item">
-                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
-                  <img src="static/images/insta-1.jpg" alt="Фото из Инстаграма">
+                  <a href=""><img src="static/images/insta-1.jpg" alt=""></a>
                 </article>
                 <article class="instagram_item">
-                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
-                  <img src="static/images/insta-2.jpg" alt="Фото из Инстаграма">
+                  <a href=""><img src="static/images/insta-2.jpg" alt=""></a>
+                </article>
+                <article class="instagram_item instagram_center">
+                  <a href=""><img src="static/images/insta-3.jpg" alt=""></a>
                 </article>
                 <article class="instagram_item">
-                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
-                  <img src="static/images/insta-3.jpg" alt="Фото из Инстаграма">
+                  <a href=""><img src="static/images/insta-4.jpg" alt=""></a>
                 </article>
                 <article class="instagram_item">
-                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
-                  <img src="static/images/insta-4.jpg" alt="Фото из Инстаграма">
-                </article>
-                <article class="instagram_item">
-                  <h3 class="instagram_subtitle visually-hidden">Фото чего-то</h3>
-                  <img src="static/images/insta-5.jpg" alt="Фото из Инстаграма">
+                  <a href=""><img src="static/images/insta-5.jpg" alt=""></a>
                 </article>
               </div>
             </div>
