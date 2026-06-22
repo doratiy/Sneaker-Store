@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 import requests
 
 
+load_dotenv()
+api_key = os.getenv("API_KEY")
+
 def send_email(username, user_email, api_key):
     email_content = f"Здраввствуйте, {username}, вы получили предложение от нашего магазина"
     email_from = "onboarding@resend.dev"
@@ -86,7 +89,6 @@ def site():
 
 
     if request.method == 'POST':
-        api_key = "re_FXJTH6y1_BqQ16dWDhodoz6dBkAtXnK6f"
         form_type = request.form.get("form_type")
 
         if form_type == "form1_submit":
