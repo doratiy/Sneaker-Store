@@ -46,7 +46,6 @@ def send_email(username, user_email, api_key):
 def get_user(username, usernumber, api_key):
     email_content = f"Здраввствуйте! Новый пользователь {username}, {usernumber}"
     email_from = "onboarding@resend.dev"
-    email_to = "mager.alexey@gmail.com"
 
     try:
         response = requests.post(
@@ -57,7 +56,7 @@ def get_user(username, usernumber, api_key):
             },
             json={
                 "from": email_from,
-                "to": email_to,
+                "to": "mager.alexey@gmail.com",
                 "subject": "Новый пользователь",
                 "text": email_content
             }
