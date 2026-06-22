@@ -9,7 +9,7 @@ import requests
 
 def send_email(username, user_email, api_key):
     email_content = f"Здраввствуйте, {username}, вы получили предложение от нашего магазина"
-    email_from = "mager.alexey@gmail.com"
+    email_from = "onboarding@resend.dev"
 
     try:
         response = requests.post(
@@ -42,7 +42,7 @@ def send_email(username, user_email, api_key):
 
 def get_user(username, usernumber, api_key):
     email_content = f"Здраввствуйте! Новый пользователь {username}, {usernumber}"
-    email_from = "mager.alexey@gmail.com"
+    email_from = "onboarding@resend.dev"
 
     try:
         response = requests.post(
