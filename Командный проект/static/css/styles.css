@@ -1279,7 +1279,6 @@ body{
     color: #DBBBA9;
 }
 
-
 .third_container-header::after {
   content: '';
   display: block;
