@@ -89,7 +89,11 @@ Flask-Mail — отправка писем на почту
 
 ![Секция About](./static/images/3.png)
 
-![Квиз](./static/images/4.png)
+![Квиз 1](./static/images/4.png)
+
+![Квиз 2](./static/images/7.png)
+
+![Квиз 3](./static/images/8.png)
 
 ![Секция Team](./static/images/5.png)
 
