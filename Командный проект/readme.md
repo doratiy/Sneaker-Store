@@ -65,9 +65,9 @@ Flask-Mail — отправка писем на почту
 
 ![Фотка сайта](/Screenshots/1.png)
 
-![Пример письма](/Screenshots/2.png)
+![Каталог с фильтром](/Screenshots/2.png)
 
-![Пример таблицы](/Screenshots/3.png)
+![Квиз](/Screenshots/3.png)
 
 ## Обратная связь
 
