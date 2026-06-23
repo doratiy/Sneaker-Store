@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_mail import Mail, Message
 import pandas as pd
 import resend
 import os
@@ -11,7 +10,7 @@ load_dotenv()
 api_key = os.getenv("API_KEY")
 
 def send_email(username, user_email, api_key):
-    email_content = f"Здраввствуйте, {username}, вы получили предложение от нашего магазина"
+    email_content = f"Здравствуйте, {username}, вы получили предложение от нашего магазина"
     email_from = "onboarding@resend.dev"
 
     try:
@@ -44,7 +43,7 @@ def send_email(username, user_email, api_key):
 
 
 def get_user(username, usernumber, api_key):
-    email_content = f"Здраввствуйте! Новый пользователь {username}, {usernumber}"
+    email_content = f"Здравствуйте! Новый пользователь {username}, {usernumber}"
     email_from = "onboarding@resend.dev"
 
     try:
