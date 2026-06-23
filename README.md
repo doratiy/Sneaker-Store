@@ -20,9 +20,6 @@ pip install -r requirements.txt
 
 ```
 RESEND_API_KEY="ваш_ключ"
-EMAIL_FROM=onboarding@resend.dev(Не менять)
-EMAIL_TO="Ваша почта"
-PORT="Порт сайта(обычно 5000)"
 ```
 
 ⚠️ Если используете Gmail, включите «Доступ для ненадёжных приложений» или создайте пароль приложения в настройках аккаунта Google.
