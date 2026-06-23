@@ -60,11 +60,17 @@ Flask-Mail — отправка писем на почту
 
 ## Скриншоты:
 
-![Фотка сайта](./static/images/1.png)
+![Шапка + Секция Hero](./static/images/1.png)
 
 ![Каталог с фильтром](./static/images/2.png)
 
-![Квиз](./static/images/3.png)
+![Секция About](./static/images/3.png)
+
+![Квиз](./static/images/4.png)
+
+![Секция Team](./static/images/5.png)
+
+![Секция FAQ + Секция Contacts + Секция Instagram + подвал сайта](./static/images/6.png)
 
 ## Обратная связь
 
