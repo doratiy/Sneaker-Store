@@ -19,7 +19,7 @@ pip install -r requirements.txt
 Если python-dotenv не установился автоматически, добавьте вручную:
 
 ```
-pip install -r python-dotenv 
+pip install python-dotenv 
 ```
 
 Далее нужен файл .env(Создайте его в корневой папке проекта). Его содержимое должно быть таким:
@@ -41,7 +41,7 @@ PORT=5000
 
 Структура таблицы для кроссовок:
 
-| Название | Цена | Изображение |
+| Название | Стоимость | Путь до картинки |
 |----------|------|-------------|
 | Nike Air Max Muse SE| 27999 | ./static/images/Nike_Air_Max_Muse_SE.jpg|
 
