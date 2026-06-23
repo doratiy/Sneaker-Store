@@ -63,11 +63,11 @@ Flask-Mail — отправка писем на почту
 
 ## Скриншоты:
 
-![Фотка сайта](/static/images/1.png)
+![Фотка сайта](./static/images/1.png)
 
-![Каталог с фильтром](/static/images/2.png)
+![Каталог с фильтром](./static/images/2.png)
 
-![Квиз](/static/images/3.png)
+![Квиз](./static/images/3.png)
 
 ## Обратная связь
 
